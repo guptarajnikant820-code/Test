@@ -1,0 +1,69 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+}
+
+main {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+label {
+  font-weight: 600;
+}
+
+input,
+textarea {
+  padding: 0.6rem;
+  font: inherit;
+  border: 1px solid #999;
+  border-radius: 6px;
+}
+
+input:focus-visible,
+textarea:focus-visible,
+button:focus-visible {
+  outline: 2px solid #1a56db;
+  outline-offset: 2px;
+}
+
+button {
+  margin-top: 0.5rem;
+  padding: 0.7rem;
+  font: inherit;
+  font-weight: 600;
+  color: #fff;
+  background: #1a56db;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1648b8;
+}
+
+#form-status {
+  margin: 0.5rem 0 0;
+  min-height: 1.5em;
+}
+
+#form-status.error {
+  color: #b42318;
+}
+
+#form-status.success {
+  color: #067647;
+}
