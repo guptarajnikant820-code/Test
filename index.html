@@ -8,19 +8,14 @@
 </head>
 <body>
   <main>
-    <h1>Contact us</h1>
+    <form id="user-form" novalidate>
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" autocomplete="username" required>
 
-    <form id="contact-form" novalidate>
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" required>
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" autocomplete="new-password" minlength="8" required>
 
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="message">Message</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
-
-      <button type="submit">Send message</button>
+      <button type="submit">Submit</button>
       <p id="form-status" role="status"></p>
     </form>
   </main>

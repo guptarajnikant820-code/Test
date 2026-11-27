@@ -1,26 +1,26 @@
-const form = document.getElementById("contact-form");
+const form = document.getElementById("user-form");
 const status = document.getElementById("form-status");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const name = form.name.value.trim();
-  const email = form.email.value.trim();
-  const message = form.message.value.trim();
+  const username = form.username.value.trim();
+  const password = form.password.value;
 
-  if (!name || !email || !message) {
-    showStatus("Please fill in every field.", "error");
+  if (!username || !password) {
+    showStatus("Please enter a username and password.", "error");
     return;
   }
 
-  if (!form.email.checkValidity()) {
-    showStatus("Enter a valid email address.", "error");
+  if (password.length < 8) {
+    showStatus("Password must be at least 8 characters.", "error");
     return;
   }
 
   // Replace this with a real request (e.g. fetch) when you have a backend.
-  console.log({ name, email, message });
-  showStatus("Thanks, your message was sent.", "success");
+  // Never log or store passwords in plain text.
+  console.log({ username });
+  showStatus("Submitted.", "success");
   form.reset();
 });
 

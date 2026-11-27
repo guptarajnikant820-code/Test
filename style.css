@@ -24,8 +24,7 @@ label {
   font-weight: 600;
 }
 
-input,
-textarea {
+input {
   padding: 0.6rem;
   font: inherit;
   border: 1px solid #999;
@@ -33,7 +32,6 @@ textarea {
 }
 
 input:focus-visible,
-textarea:focus-visible,
 button:focus-visible {
   outline: 2px solid #1a56db;
   outline-offset: 2px;
